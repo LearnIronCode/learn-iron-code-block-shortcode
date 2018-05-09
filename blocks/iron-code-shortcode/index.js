@@ -58,7 +58,7 @@
 			return el(
 				'p',
 				{ className: props.className },
-				__( 'Hello from the editor!' )
+				__( 'This block will be replaced by the return value of a PHP function that is processed on page load.' )
 			);
 		},
 
@@ -67,14 +67,10 @@
 		 * into the final markup, which is then serialized by Gutenberg into `post_content`.
 		 * @see https://wordpress.org/gutenberg/handbook/block-edit-save/#save
 		 *
-		 * @return {Element}       Element to render.
+		 * @return null The rendering of this block will be done on front-end page load, via PHP.
 		 */
 		save: function() {
-			return el(
-				'p',
-				{},
-				__( 'Hello from the saved content!' )
-			);
+			return null;
 		}
 	} );
 } )(
