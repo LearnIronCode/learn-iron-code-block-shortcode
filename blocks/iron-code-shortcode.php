@@ -56,7 +56,18 @@ function iron_code_shortcode_block_init() {
 	register_block_type( 'learn-iron-code-block-shortcode/iron-code-shortcode', array(
 		'editor_script' => 'iron-code-shortcode-block-editor',
 		'editor_style'  => 'iron-code-shortcode-block-editor',
+		'render_callback' => 'learn_iron_code_block_shortcode_render_callback',
 		'style'         => 'iron-code-shortcode-block',
 	) );
+
+	/**
+	 * Learn_iron_code_block_shortcode_render_callback
+	 *
+	 * @param mixed $attributes Attributes from the block we are rendering.
+	 * @return string Markup to output on the page.
+	 */
+	function learn_iron_code_block_shortcode_render_callback( $attributes ) {
+		return '<p>This output comes from PHP processed on page load. This is similiar to a WordPress shortcode.</p>';
+	}
 }
 add_action( 'init', 'iron_code_shortcode_block_init' );
