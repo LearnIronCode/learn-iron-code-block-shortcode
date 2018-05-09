@@ -5,7 +5,9 @@
  */
 
 .wp-block-learn-iron-code-block-shortcode-iron-code-shortcode {
-	background-color: #000;
+	background-color: #007fbc;
+	border: 5px solid #fff;
 	color: #fff;
-	padding: 2px;
+	outline: 5px solid #19a7d9;
+	padding: 10px;
 }
